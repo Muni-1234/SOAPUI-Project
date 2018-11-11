@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="a9ff8512-9fda-4bba-b0fb-5dcd866c485c" activeEnvironment="Default" name="GetService" soapui-version="5.4.0" abortOnError="false" runType="SEQUENTIAL" resourceRoot="" xmlns:con="http://eviware.com/soapui/config"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.actions.iface.tools.soapui.TestRunnerAction@values-local"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="Report Format(s)" value=""/>
+  <con:entry key="Host:Port" value=""/>
+  <con:entry key="Export JUnit Results" value="true"/>
+  <con:entry key="Export All" value="false"/>
+  <con:entry key="Save After" value="false"/>
+  <con:entry key="Add Settings" value="false"/>
+  <con:entry key="WSS Password Type" value=""/>
+  <con:entry key="TestSuite" value="&lt;all>"/>
+  <con:entry key="Endpoint" value=""/>
+  <con:entry key="Select Report Type" value=""/>
+  <con:entry key="System Properties" value=""/>
+  <con:entry key="Password" value=""/>
+  <con:entry key="Print Report" value="false"/>
+  <con:entry key="Open Report" value="false"/>
+  <con:entry key="Export JUnit Results with test properties" value="false"/>
+  <con:entry key="Global Properties" value=""/>
+  <con:entry key="Project Properties" value=""/>
+  <con:entry key="Project Password" value=""/>
+  <con:entry key="TestCase" value="&lt;all>"/>
+  <con:entry key="Username" value=""/>
+  <con:entry key="user-settings.xml Password" value=""/>
+  <con:entry key="TestRunner Path" value=""/>
+  <con:entry key="Environment" value="Default"/>
+  <con:entry key="Coverage Report" value="false"/>
+  <con:entry key="Enable UI" value="false"/>
+  <con:entry key="Root Folder" value="C:\Users\User\Desktop\SOAP"/>
+  <con:entry key="Ignore Errors" value="false"/>
+  <con:entry key="Domain" value=""/>
+  <con:entry key="Tool Args" value=""/>
+  <con:entry key="Save Project" value="false"/>
+</xml-fragment>]]></con:setting></con:settings><con:interface xsi:type="con:RestService" id="a5d00732-5a25-4844-b4e7-774cf0c3398e" wadlVersion="http://wadl.dev.java.net/2009/02" name="https://reqres.in" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart=""/><con:endpoints><con:endpoint>https://reqres.in</con:endpoint></con:endpoints><con:resource name="Users" path="/api/users" id="b761f84e-a772-45b2-92a0-23f3da191948"><con:settings/><con:parameters><con:parameter><con:name>page</con:name><con:value>2</con:value><con:style>QUERY</con:style><con:default>2</con:default><con:path xsi:nil="true"/><con:description xsi:nil="true"/></con:parameter></con:parameters><con:method name="Users" id="3bb39cc8-b86a-4e70-84f3-e4788a3827a7" method="GET"><con:settings/><con:parameters/><con:representation type="RESPONSE"><con:mediaType>application/json; charset=utf-8</con:mediaType><con:status>200</con:status><con:params/><con:element xmlns:user="https://reqres.in/api/users">user:Response</con:element></con:representation><con:request name="Request" id="38a05e34-2342-4c5b-b7d5-ae5b14847511" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>https://reqres.in</con:endpoint><con:request/><con:originalUri>https://reqres.in/api/users</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/><con:parameterOrder><con:entry>page</con:entry></con:parameterOrder></con:request></con:method></con:resource></con:interface><con:testSuite id="b66a2172-14a0-4519-83d5-42632f940df1" name="AutoTestSuite"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="d5a860f4-0c51-41b7-897b-124988323e9b" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="TestCase1" searchProperties="true"><con:settings/><con:testStep type="properties" name="CountryCodes" id="102802df-4e8e-4438-99cb-1fbbb9dbe77c"><con:settings/><con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:properties><con:property><con:name>Name</con:name><con:value>I am in TestStep</con:value></con:property><con:property><con:name>CountryName</con:name><con:value>INDIA</con:value></con:property></con:properties></con:config></con:testStep><con:testStep type="restrequest" name="Request-1" id="b3c575eb-ac8e-463a-8144-cd30fb350bc2"><con:settings/><con:config service="https://reqres.in" resourcePath="/api/users" methodName="Users" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="Request-1" id="38a05e34-2342-4c5b-b7d5-ae5b14847511" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting><con:setting id="com.eviware.soapui.impl.support.AbstractHttpRequest@dump-file">C:/Users/User/Desktop/TestData.xlsx</con:setting></con:settings><con:endpoint>https://reqres.in</con:endpoint><con:request/><con:originalUri>https://reqres.in/api/users</con:originalUri><con:assertion type="Simple Contains" id="28e57859-0693-4545-b284-126b08e6039c" name="Contains"><con:configuration><token>Charles</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:assertion type="Valid HTTP Status Codes" id="e6d1f841-36ab-421e-9a5b-ce79fae37a9e" name="Valid HTTP Status Codes"><con:configuration><codes>200</codes></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters><entry key="page" value="2" xmlns="http://eviware.com/soapui/config"/></con:parameters><con:parameterOrder><con:entry>page</con:entry></con:parameterOrder></con:restRequest></con:config></con:testStep><con:testStep type="restrequest" name="Request-2" id="c238db74-cf94-467d-b083-c97622a112ab"><con:settings/><con:config service="https://reqres.in" resourcePath="/api/users" methodName="Users" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="Request-2" id="38a05e34-2342-4c5b-b7d5-ae5b14847511" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>https://reqres.in</con:endpoint><con:request/><con:originalUri>https://reqres.in/api/users</con:originalUri><con:assertion type="Simple Contains" id="660cd118-7905-4b1a-9ebc-13e8b0b8a7a5" name="Contains"><con:configuration><token>Tracey</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:assertion type="Valid HTTP Status Codes" id="ba1b6731-3a89-4f84-9881-b72ac93015a4" name="Valid HTTP Status Codes"><con:configuration><codes>200</codes></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/><con:parameterOrder><con:entry>page</con:entry></con:parameterOrder></con:restRequest></con:config></con:testStep><con:testStep type="groovy" name="GetSetProperties" id="d6eac146-6cbf-4399-914c-bb428c1da5dd"><con:settings/><con:config><script>/*https://www.soapui.org/apidocs/com/eviware/soapui/model/testsuite/TestRunner.html
+ https://www.soapui.org/scripting-properties/tips-tricks.html
+*/
+
+//***** GET Property *********/
+
+//Project Level
+def projectprop = testRunner.testCase.testSuite.project.getPropertyValue("Name")
+log.info ("Project Property: "+projectprop)
+
+//TestSuite Level
+def testsuiteprop = testRunner.testCase.testSuite.getPropertyValue("Name")
+log.info ("TestSuite Property: "+testsuiteprop)
+
+//TestCase Level
+def testcaseprop = testRunner.testCase.getPropertyValue("Name")
+log.info ("TestCase Property: "+testcaseprop)
+
+//TestStep Level
+def teststepprop = testRunner.testCase.getTestStepByName("CountryCodes").getPropertyValue("Name")
+log.info ("TestStep Property: "+teststepprop)
+
+//Global Level
+def Globalprop = com.eviware.soapui.SoapUI.globalProperties.getPropertyValue("Name")
+log.info ("TestCase Property: "+Globalprop)
+
+
+//***** SET Property *********/
+
+//Project Level
+testRunner.testCase.testSuite.project.setPropertyValue("Name","I am in Project")
+
+//TestSuite Level
+testRunner.testCase.testSuite.setPropertyValue("Name","I am in TestSuite")
+
+//TestCase Level
+testRunner.testCase.setPropertyValue("Name","I am in TestCase")
+
+//TestStep Level
+testRunner.testCase.getTestStepByName("CountryCodes").setPropertyValue("Name","I am in TestStep")
+
+//Global Level
+com.eviware.soapui.SoapUI.globalProperties.setPropertyValue("Name","I am in Global")
+
+//Project Level: SET &amp; GET the Value
+testRunner.testCase.testSuite.project.setPropertyValue("Name","I am in Project")
+log.info (testRunner.testCase.testSuite.project.getPropertyValue("Name"))
+
+//Project Level: Adding Only Property Name 
+testRunner.testCase.testSuite.project.addPropertyValue("DOB")
+
+//Project Level: Adding Property Name and Value 
+testRunner.testCase.testSuite.project.setPropertyValue("DOB","04-07-1985")
+
+//Remove: Project Level
+testRunner.testCase.testSuite.project.removeProperty("Name")
+
+//Remove: TestSuite Level
+testRunner.testCase.testSuite.removeProperty("Name")
+
+/*testRunner.testCase.properties.each
+{
+	key,value ->
+	log.info (key)
+	log.info (key+"-"+value)
+	//log.info (testRunner.testCase.getPropertyValue(key))	
+}
+*/
+</script></con:config></con:testStep><con:testStep type="groovy" name="Groovy Script1" id="cef5fd19-b819-451c-a463-e424666cbb59"><con:settings/><con:config><script>log.info "Hello World..."
+
+def name = context.expand('${#Project#Name}')
+log.info ("Property Name: "+name);
+
+
+
+def name1 = context.expand ('${#Global#Name}')
+log.info ("Property Name: "+name1);</script></con:config></con:testStep><con:testStep type="groovy" name="Groovy Script2" id="2f1830d1-8109-46df-a33f-c576c23eb9ca"><con:settings/><con:config><script>//log.info ("Hello World...");
+
+int a=10;
+int b=20;
+int c=a+b
+
+//log.info (" Result is: "+c);
+
+
+//log
+//context
+//testRunner
+
+log.info testRunner.metaClass.methods.name.unique().sort()
+</script></con:config></con:testStep><con:testStep type="groovy" name="Hello" id="39a40e92-969e-4d73-99e0-e61191e87877"><con:settings/><con:config><script>class Hello{
+	def log;
+	def context;
+	def testRunner;
+
+	def Hello(log, context, testRunner){
+		this.log = log
+		this.context = context
+		this.testRunner = testRunner
+	}
+	def sayHello(){
+		log.info (" Saying Hello.. ");
+	}
+	def sayHello(String name){
+		log.info (" Saying Hello.. "+name);
+	}
+}
+context.setProperty("Hello", new Hello(log, context, testRunner))</script></con:config></con:testStep><con:testStep type="groovy" name="CallHello" id="7d78e549-771f-4fd7-b735-38abb9113554"><con:settings/><con:config><script>def testStep = testRunner.testCase.getTestStepByName("Hello")
+testStep.run(testRunner, context)
+context.Hello.sayHello()
+context.Hello.sayHello("Muni")
+</script></con:config></con:testStep><con:properties><con:property><con:name>Name</con:name><con:value>I am in TestCase</con:value></con:property><con:property><con:name>DOB</con:name><con:value>04-07-1985</con:value></con:property></con:properties></con:testCase><con:testCase id="2ddb58c1-67af-4a81-ae7b-7027e03a4007" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="TestCase2" searchProperties="true"><con:settings/><con:testStep type="groovy" name="CallHello" id="908a9214-e674-492f-94fa-fb929020fde1"><con:settings/><con:config><script>/*
+def testStep = testRunner.testCase.getTestStepByName("Hello")
+testStep.run(testRunner, context)
+context.Hello.sayHello()
+context.Hello.sayHello("Muni")
+*/
+
+project = testRunner.testCase.testSuite.project;
+tcase = project.testSuites["AutoTestSuite"].testCases["TestCase1"];
+hello = tcase.getTestStepByName("Hello");
+hello.run(testRunner, context)
+context.Hello.sayHello()
+context.Hello.sayHello("Muni")</script></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="d7e5b27c-4a76-4628-933e-49ddba408230" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="TestCase3" searchProperties="true"><con:settings/><con:properties/></con:testCase><con:properties><con:property><con:name>Name</con:name><con:value>I am in TestSuite</con:value></con:property><con:property><con:name>DOB</con:name><con:value>04-07-1985</con:value></con:property></con:properties></con:testSuite><con:properties><con:property><con:name>DOB</con:name><con:value>04-07-1985</con:value></con:property><con:property><con:name>Name</con:name><con:value>I am in Project</con:value></con:property></con:properties><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/><con:sensitiveInformation/></con:soapui-project>

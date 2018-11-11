@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="98f4913f-d662-4982-80e6-6682f1b33065" activeEnvironment="Default" name="Muni" soapui-version="5.4.0" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:testSuite id="1a483dfd-2e1f-456e-9b2c-f5e08efeb563" name="Class"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="a8cd59a0-656c-46fd-82fe-7f8ae6a118e6" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Class1" searchProperties="true"><con:settings/><con:testStep type="groovy" name="SampleTest" id="c47e5fea-d0aa-4ec0-b8a8-53cd1a24a07f"><con:settings/><con:config><script>def a=10
+def b="Muni"
+
+log.info a
+log.info b</script></con:config></con:testStep><con:properties/></con:testCase><con:properties/></con:testSuite><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/></con:soapui-project>
